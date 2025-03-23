@@ -193,7 +193,7 @@ const ValuePropositionSection = () => {
                 <tr className="bg-brand-secondary/20">
                   <th className="p-4 text-left font-medium border-b">Feature</th>
                   <th className="p-4 text-left font-medium border-b">Instantly / Lemlist / Smartlead</th>
-                  <th className="p-4 text-left font-medium border-b">ScaleMailer (What You're Building)</th>
+                  <th className="p-4 text-left font-medium border-b">ScaleMailer </th>
                 </tr>
               </thead>
               <tbody>
