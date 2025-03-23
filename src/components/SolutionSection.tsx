@@ -114,12 +114,11 @@ const SolutionSection = () => {
         </div>
 
         {/* Visual indicator */}
-        <div className={cn(
+        {/* <div className={cn(
           "mt-16 max-w-4xl mx-auto rounded-xl overflow-hidden shadow-elevated transition-all duration-700 delay-700 transform",
           isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"
         )}>
           <div className="bg-brand-secondary aspect-[21/9] relative">
-            {/* Dashboard mockup elements */}
             <div className="absolute inset-0 p-8 flex flex-col">
               <div className="h-8 w-full flex items-center justify-between">
                 <div className="flex space-x-2">
@@ -167,8 +166,8 @@ const SolutionSection = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+          </div> 
+        </div>*/}
       </div>
     </section>
   );
