@@ -110,7 +110,7 @@ const ValuePropositionSection = () => {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             )}
           >
-            🔍 What Are You Actually Trying to Build?
+            🔍 What Are We Actually Trying to Build?
           </h2>
           
           <p
@@ -120,7 +120,7 @@ const ValuePropositionSection = () => {
             )}
             style={{ transitionDelay: "100ms" }}
           >
-            You're building a backend automation engine for cold email at scale — not just a sending tool, but a system that:
+            We are building a backend automation engine for cold email at scale — not just a sending tool, but a system that:
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
@@ -250,7 +250,7 @@ const ValuePropositionSection = () => {
               It's not just another cold email tool — it's a cold email infra layer.
             </p>
             <p className="text-xl mt-4 font-medium">
-              You're not replacing Instantly. You're creating the backend engine they wish they had.
+              We are not just replacing Instantly. We are creating the backend engine they wish they had.
             </p>
           </div>
         </div>
