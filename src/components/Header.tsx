@@ -41,7 +41,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <a href="/" className="flex items-center">
           <span className="text-xl font-semibold text-brand-dark">
-            OutreachHub
+            ScaleMailer
           </span>
         </a>
 

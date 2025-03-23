@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="md:col-span-2">
             <div className="mb-4">
               <span className="text-xl font-semibold text-white">
-                OutreachHub
+                ScaleMailer
               </span>
             </div>
             <p className="mb-6 max-w-md">
@@ -80,7 +80,7 @@ const Footer = () => {
         
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
-            &copy; {currentYear} OutreachHub. All rights reserved.
+            &copy; {currentYear} ScaleMailer. All rights reserved.
           </div>
           
           <div className="flex space-x-6">
