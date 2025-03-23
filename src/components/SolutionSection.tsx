@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from "react";
 import { 
   Activity, Server, Shield, List, BarChart3, 
@@ -79,7 +78,7 @@ const SolutionSection = () => {
               isVisible ? "opacity-100" : "opacity-0"
             )}
           >
-            <span className="text-sm font-medium">Solution</span>
+            <span className="text-m font-bold">Solution</span>
           </div>
           
           <h2 

@@ -1,5 +1,5 @@
 
-import { cn } from "@/lib/utils";
+import { FiSend } from 'react-icons/fi';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -9,9 +9,11 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
-            <div className="mb-4">
+            <div className="mb-4 flex items-center space-x-2">
+              <FiSend className="text-[#3C82F4] w-6 h-6" />
               <span className="text-xl font-semibold text-white">
-                ScaleMailer
+                <span className="text-[#3C82F4]">Scale</span>
+                <span className="text-white">Mailer</span>
               </span>
             </div>
             <p className="mb-6 max-w-md">

@@ -1,9 +1,9 @@
-
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import Button from "./Button";
 import { Menu, X } from "lucide-react";
+import { FiSend } from 'react-icons/fi';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,9 +39,14 @@ const Header = () => {
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <a href="/" className="flex items-center">
-          <span className="text-xl font-semibold text-brand-dark">
-            ScaleMailer
+        <a href="/" className="flex items-center space-x-2">
+          {/* Icon */}
+          <FiSend className="text-[#3C82F4] w-6 h-6" />
+
+          {/* Brand name with color split */}
+          <span className="text-xl font-semibold">
+            <span className="text-[#3C82F4]">Scale</span>
+            <span className="text-black">Mailer</span>
           </span>
         </a>
 

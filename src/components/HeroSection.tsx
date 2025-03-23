@@ -9,7 +9,7 @@ const HeroSection = () => {
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
           {/* Subtle label */}
           <div className="inline-block rounded-full px-4 py-1 mb-8 bg-brand-primary/10 text-brand-primary animate-fadeIn">
-            <span className="text-sm font-medium">Early Access Program</span>
+            <span className="text-m font-bold">Early Access Program</span>
           </div>
           
           {/* Main headline */}
@@ -45,7 +45,7 @@ const HeroSection = () => {
         </div>
         
         {/* Visual element */}
-        <div className="mt-16 md:mt-24 relative max-w-4xl mx-auto animate-scaleIn" style={{ animationDelay: "0.8s" }}>
+        {/* <div className="mt-16 md:mt-24 relative max-w-4xl mx-auto animate-scaleIn" style={{ animationDelay: "0.8s" }}>
           <div className="relative z-20 rounded-xl overflow-hidden shadow-intense">
             <div className="aspect-[16/9] bg-gradient-to-br from-brand-primary/90 to-brand-accent/90 text-center flex items-center justify-center p-4 md:p-8">
               <div className="glass rounded-lg p-4 md:p-8 w-full max-w-xl">
@@ -63,10 +63,9 @@ const HeroSection = () => {
             </div>
           </div>
           
-          {/* Background decorative elements */}
           <div className="absolute -bottom-16 -right-16 w-40 h-40 bg-brand-secondary rounded-full opacity-80 animate-pulse"></div>
           <div className="absolute -top-16 -left-16 w-32 h-32 bg-brand-accent/20 rounded-full opacity-60 animate-float"></div>
-        </div>
+        </div> */}
       </div>
       
       {/* Background gradient */}

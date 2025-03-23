@@ -100,13 +100,13 @@ const ProblemSection = () => {
           <div className="md:col-span-1 flex items-center justify-center">
             <div 
               className={cn(
-                "bg-white/5 backdrop-blur rounded-lg p-6 text-center transition-all duration-700 delay-700 transform",
+                "bg-white/80 backdrop-blur rounded-lg p-6 text-center transition-all duration-700 delay-700 transform",
                 isVisible 
                   ? "opacity-100 translate-y-0" 
                   : "opacity-0 translate-y-10"
               )}
             >
-              <p className="text-lg leading-relaxed">
+              <p className="text-lg text-black leading-relaxed">
                 We've been there — and we're building the tool we wish we had.
               </p>
             </div>

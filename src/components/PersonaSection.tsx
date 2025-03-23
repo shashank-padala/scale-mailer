@@ -72,7 +72,7 @@ const PersonaSection = () => {
               isVisible ? "opacity-100" : "opacity-0"
             )}
           >
-            <span className="text-sm font-medium">For Whom</span>
+            <span className="text-m font-bold">For Whom</span>
           </div>
           
           <h2 
