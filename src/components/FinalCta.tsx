@@ -81,6 +81,7 @@ const FinalCta = () => {
             variant="outlined" 
             size="lg"
             className="border-white/30 text-white hover:bg-white/10"
+            onClick={() => window.open('https://calendly.com/shashank-padala/15-mins', '_blank')}
           >
             Book a Demo
           </Button>

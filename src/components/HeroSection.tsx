@@ -38,8 +38,9 @@ const HeroSection = () => {
             <Button 
               variant="outlined" 
               size="lg"
+              onClick={() => window.open('https://calendly.com/shashank-padala/15-mins', '_blank')}
             >
-              Book a Demo
+              Book a demo
             </Button>
           </div>
         </div>

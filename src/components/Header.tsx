@@ -97,10 +97,10 @@ const Header = () => {
             Beta Program
           </a>
           <div className="pt-6 w-full space-y-4">
-            <Button variant="outlined" className="w-full">
+            <Button variant="outlined" className="w-full" onClick={() => window.open('https://calendly.com/shashank-padala/15-mins', '_blank')}>
               Book a Demo
             </Button>
-            <Button variant="primary" className="w-full">
+            <Button variant="primary" className="w-full" onClick={() => document.getElementById('beta')?.scrollIntoView({ behavior: 'smooth' })}>
               Join the Beta
             </Button>
           </div>
