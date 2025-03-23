@@ -61,10 +61,10 @@ const Header = () => {
           <a href="#beta" className="text-brand-dark hover:text-brand-primary smooth-transition animated-underline">
             Beta Program
           </a>
-          <Button variant="outlined" size="sm">
+          <Button variant="outlined" size="sm"  onClick={() => window.open('https://calendly.com/shashank-padala/15-mins', '_blank')}>
             Book a Demo
           </Button>
-          <Button variant="primary" size="sm">
+          <Button variant="primary" size="sm" onClick={() => document.getElementById('beta')?.scrollIntoView({ behavior: 'smooth' })}>
             Join the Beta
           </Button>
         </nav>
