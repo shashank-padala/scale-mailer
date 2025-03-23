@@ -98,7 +98,7 @@ const BetaSection = () => {
                   
                   <div>
                     <label className="block text-black/80 text-sm mb-1">Your Role</label>
-                    <select className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-white/30">
+                    <select className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-black focus:outline-none focus:ring-2 focus:ring-white/30">
                       <option value="" disabled selected>Select your role</option>
                       <option value="agency">Agency Owner</option>
                       <option value="marketer">Marketer</option>
