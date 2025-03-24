@@ -131,9 +131,9 @@ const BetaSection = () => {
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
               )}
             >
-              <Button variant="primary" size="lg" icon={<ArrowRight size={20} />} iconPosition="right">
+              {/* <Button variant="primary" size="lg" icon={<ArrowRight size={20} />} iconPosition="right">
                 Apply for Beta Access
-              </Button>
+              </Button> */}
             </div>
           </div>
 
@@ -159,7 +159,7 @@ const BetaSection = () => {
                     <input
                       name="full_name"
                       type="text"
-                      className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-white/30"
+                      className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-black focus:outline-none focus:ring-2 focus:ring-white/30"
                       placeholder="Your name"
                       required
                     />
@@ -172,7 +172,7 @@ const BetaSection = () => {
                     <input
                       name="email"
                       type="email"
-                      className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-white/30"
+                      className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-black focus:outline-none focus:ring-2 focus:ring-white/30"
                       placeholder="your@email.com"
                       required
                     />
@@ -185,7 +185,7 @@ const BetaSection = () => {
                     <input
                       name="company"
                       type="text"
-                      className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-white/30"
+                      className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-black focus:outline-none focus:ring-2 focus:ring-white/30"
                       placeholder="Your company"
                     />
                   </div>
@@ -205,7 +205,7 @@ const BetaSection = () => {
                       </option>
                       <option value="agency">Agency Owner</option>
                       <option value="marketer">Marketer</option>
-                      <option value="founder">Founder</option>
+                      <option value="founder">Startup Founder</option>
                       <option value="sdr">SDR/BDR</option>
                       <option value="other">Other</option>
                     </select>
@@ -246,10 +246,6 @@ const BetaSection = () => {
           </div>
         </div>
       </div>
-
-      {/* Decorative elements */}
-      <div className="absolute bottom-0 right-0 w-64 h-64 bg-brand-primary/5 rounded-full"></div>
-      <div className="absolute top-1/4 left-0 w-40 h-40 bg-brand-accent/5 rounded-full"></div>
     </section>
   );
 };
