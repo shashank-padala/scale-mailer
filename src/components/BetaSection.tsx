@@ -86,7 +86,7 @@ const BetaSection = () => {
     <section
       ref={sectionRef}
       id="beta"
-      className="section bg-gradient-to-b from-white to-brand-secondary/30 relative overflow-hidden"
+      className="section bg-gradient-to-b from-white to-brand-secondary/30 relative"
     >
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -143,7 +143,7 @@ const BetaSection = () => {
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-20"
             )}
           >
-            <div className="aspect-[4/5] bg-gradient-to-br from-brand-primary to-brand-accent p-8 rounded-xl relative">
+            <div className="lg:aspect-[4/5] bg-gradient-to-br from-brand-primary to-brand-accent p-8 rounded-xl relative">
               <div
                 className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48Y2lyY2xlIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLW9wYWNpdHk9Ii4yIiBjeD0iMTAiIGN5PSIxMCIgcj0iMi41Ii8+PC9nPjwvc3ZnPg==')] opacity-20"
               ></div>
