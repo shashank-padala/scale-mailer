@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import Button from "./Button";
 import { Menu, X } from "lucide-react";
 import { FiSend } from 'react-icons/fi';
+import { DEMO_CALL_URL } from "@/config/constants";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -61,7 +62,7 @@ const Header = () => {
           <a href="#beta" className="text-brand-dark hover:text-brand-primary smooth-transition animated-underline">
             Beta Program
           </a>
-          <Button variant="outlined" size="sm"  onClick={() => window.open('https://calendly.com/shashank-padala/15-mins', '_blank')}>
+          <Button variant="outlined" size="sm"  onClick={() => window.open(DEMO_CALL_URL, '_blank')}>
             Book a Demo
           </Button>
           <Button variant="primary" size="sm" onClick={() => document.getElementById('beta')?.scrollIntoView({ behavior: 'smooth' })}>

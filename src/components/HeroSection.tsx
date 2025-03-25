@@ -1,6 +1,7 @@
 
 import { ArrowRight } from "lucide-react";
 import Button from "./Button";
+import { DEMO_CALL_URL } from "@/config/constants";
 
 const HeroSection = () => {
   return (
@@ -38,7 +39,7 @@ const HeroSection = () => {
             <Button 
               variant="outlined" 
               size="lg"
-              onClick={() => window.open('https://calendly.com/shashank-padala/15-mins', '_blank')}
+              onClick={() => window.open(DEMO_CALL_URL, '_blank')}
             >
               Book a demo
             </Button>
