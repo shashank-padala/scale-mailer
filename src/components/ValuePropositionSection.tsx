@@ -250,7 +250,7 @@ const ValuePropositionSection = () => {
               It's not just another cold email tool — it's a cold email infra layer.
             </p>
             <p className="text-xl mt-4 font-medium">
-              We are not replacing Instantly, Lemlist, Smartlead,e tc. We are creating the backend engine they wish they had.
+              We are not replacing Instantly, Lemlist, Smartlead, e tc. We are creating the backend engine they wish they had.
             </p>
           </div>
         </div>
