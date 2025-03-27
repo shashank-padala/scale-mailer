@@ -274,7 +274,7 @@ const LeadGeneration = () => {
           </CardContent>
         </Card>
       </div>
-      
+      <br />
       <Card>
         <CardHeader className="pb-3">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">

@@ -1,4 +1,3 @@
-
 import { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { 
@@ -12,9 +11,9 @@ import {
   Settings, 
   UserCircle 
 } from "lucide-react";
-import { APP_NAME } from "@/config/constants";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { FiSend } from 'react-icons/fi';
 
 type DashboardTab = 
   | "overview" 
@@ -68,13 +67,16 @@ export function DashboardLayout({ children, activeTab, setActiveTab }: Dashboard
     <div className="min-h-screen flex flex-col">
       <header className="border-b bg-background">
         <div className="flex items-center justify-between h-16 px-4 md:px-6">
-          <Link to="/" className="flex items-center gap-2 font-semibold">
-            <img 
-              src="/scale-mailer-logo-dark.png" 
-              alt={APP_NAME} 
-              className="h-8 w-auto" 
-            />
-          </Link>
+          <a href="/" className="flex items-center space-x-2">
+            {/* Icon */}
+            <FiSend className="text-[#3C82F4] w-6 h-6" />
+
+            {/* Brand name with color split */}
+            <span className="text-xl font-semibold">
+              <span className="text-[#3C82F4]">Scale</span>
+              <span className="text-black">Mailer</span>
+            </span>
+          </a>
           <div className="flex items-center gap-2">
             <Button variant="ghost" size="icon">
               <Settings className="h-5 w-5" />
