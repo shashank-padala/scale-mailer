@@ -7,6 +7,9 @@ import InboxOverview from "@/components/dashboard/InboxOverview";
 import InboxHealth from "@/components/dashboard/InboxHealth";
 import LeadGeneration from "@/components/dashboard/LeadGeneration";
 import PerformanceDashboard from "@/components/dashboard/PerformanceDashboard";
+import BrandManagement from "@/components/dashboard/BrandManagement";
+import LeadFinder from "@/components/dashboard/LeadFinder";
+import CampaignManagement from "@/components/dashboard/CampaignManagement";
 
 type DashboardTab = 
   | "overview" 
@@ -14,7 +17,10 @@ type DashboardTab =
   | "domain-purchase" 
   | "inbox-overview" 
   | "inbox-health" 
-  | "lead-generation";
+  | "lead-generation"
+  | "brand-management"
+  | "lead-finder"
+  | "campaign-management";
 
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState<DashboardTab>("overview");
@@ -31,6 +37,12 @@ const Dashboard = () => {
         return <InboxHealth />;
       case "lead-generation":
         return <LeadGeneration />;
+      case "brand-management":
+        return <BrandManagement />;
+      case "lead-finder":
+        return <LeadFinder />;
+      case "campaign-management":
+        return <CampaignManagement />;
       default:
         return <PerformanceDashboard />;
     }

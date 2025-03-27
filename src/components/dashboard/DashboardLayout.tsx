@@ -1,3 +1,4 @@
+
 import { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { 
@@ -9,7 +10,10 @@ import {
   Mail, 
   Plus, 
   Settings, 
-  UserCircle 
+  UserCircle,
+  Users,
+  Search,
+  Send
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -21,7 +25,10 @@ type DashboardTab =
   | "domain-purchase" 
   | "inbox-overview" 
   | "inbox-health" 
-  | "lead-generation";
+  | "lead-generation"
+  | "brand-management"
+  | "lead-finder"
+  | "campaign-management";
 
 interface DashboardLayoutProps {
   children: ReactNode;
@@ -34,6 +41,11 @@ const NAV_ITEMS = [
     id: "overview",
     label: "Dashboard",
     icon: LayoutDashboard,
+  },
+  {
+    id: "brand-management",
+    label: "Brand Management",
+    icon: Users,
   },
   {
     id: "brand-setup",
@@ -59,6 +71,16 @@ const NAV_ITEMS = [
     id: "lead-generation",
     label: "Lead Generation",
     icon: BarChart3,
+  },
+  {
+    id: "lead-finder",
+    label: "Lead Finder",
+    icon: Search,
+  },
+  {
+    id: "campaign-management",
+    label: "Campaigns",
+    icon: Send,
   },
 ];
 
