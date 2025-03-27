@@ -171,7 +171,7 @@ const BrandManagement = () => {
             <DollarSign className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">₹{totalRevenue.toLocaleString(undefined, { maximumFractionDigits: 0 })}</div>
+            <div className="text-2xl font-bold">${totalRevenue.toLocaleString(undefined, { maximumFractionDigits: 0 })}</div>
             <p className="text-xs text-muted-foreground">
               From converted leads
             </p>
@@ -184,7 +184,7 @@ const BrandManagement = () => {
             <BarChart className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">₹{avgCostPerLead.toFixed(2)}</div>
+            <div className="text-2xl font-bold">${avgCostPerLead.toFixed(2)}</div>
             <p className="text-xs text-muted-foreground">
               Includes domain costs
             </p>
@@ -262,9 +262,9 @@ const BrandManagement = () => {
                   <TableCell className="text-right">{brand.callsBooked.toLocaleString()}</TableCell>
                   <TableCell className="text-right">{brand.salesClosed.toLocaleString()}</TableCell>
                   <TableCell className="text-right">{brand.domainsUsed}</TableCell>
-                  <TableCell className="text-right">₹{brand.domainCosts.toLocaleString()}</TableCell>
-                  <TableCell className="text-right">₹{brand.costPerLead.toFixed(2)}</TableCell>
-                  <TableCell className="text-right">₹{brand.revenuePerLead.toFixed(2)}</TableCell>
+                  <TableCell className="text-right">${brand.domainCosts.toLocaleString()}</TableCell>
+                  <TableCell className="text-right">${brand.costPerLead.toFixed(2)}</TableCell>
+                  <TableCell className="text-right">${brand.revenuePerLead.toFixed(2)}</TableCell>
                   <TableCell>
                     {brand.status === "active" && (
                       <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">

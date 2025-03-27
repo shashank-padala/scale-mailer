@@ -191,7 +191,7 @@ const LeadFinder = () => {
     if (count > 0) {
       toast({
         title: "Leads Added to Cart",
-        description: `${count} leads added to your cart. Total cost: ₹${count * 25}`,
+        description: `${count} leads added to your cart. Total cost: ${count * 2}`,
       });
     } else {
       toast({
@@ -363,7 +363,7 @@ const LeadFinder = () => {
   const renderLeadFinder = () => (
     <div className="mt-6">
       <div className="flex justify-between items-center mb-4">
-        <h2 className="text-2xl font-bold">Lead Finder</h2>
+        <h2 className="text-2xl font-bold">Lead Finder - Create New Audience</h2>
         <Button variant="outline" size="sm" onClick={() => setUploadMethod(null)}>
           <X className="h-4 w-4 mr-2" /> Back to Options
         </Button>
@@ -623,7 +623,7 @@ const LeadFinder = () => {
                           </svg>
                         </Button>
                       </TableCell>
-                      <TableCell className="text-right">₹25</TableCell>
+                      <TableCell className="text-right">$1.5</TableCell>
                     </TableRow>
                   ))}
                 </TableBody>
@@ -635,7 +635,7 @@ const LeadFinder = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-sm font-medium">
-                    Selected: {selectedLeads.length} | Total: ₹{selectedLeads.length * 25}
+                    Selected: {selectedLeads.length} | Total: ${selectedLeads.length * 25}
                   </span>
                   <Button onClick={addToCart}>
                     Add to Cart
