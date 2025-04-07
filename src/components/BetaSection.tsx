@@ -58,48 +58,44 @@ const BetaSection = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-  
-    // Grab form data
-    const formData = new FormData(e.currentTarget);
+
+    // Save a reference to the form element before async calls
+    const formEl = e.currentTarget;
+
+    // Collect form data and convert it into a JSON object
+    const formData = new FormData(formEl);
     const data = {
-      full_name: formData.get("full_name"),
-      email: formData.get("email"),
-      company: formData.get("company"),
-      role: formData.get("role"),
-      email_volume: formData.get("email_volume")
+      full_name: formData.get("full_name")?.toString() || "",
+      email: formData.get("email")?.toString() || "",
+      company: formData.get("company")?.toString() || "",
+      role: formData.get("role")?.toString() || "",
+      email_volume: formData.get("email_volume")?.toString() || ""
     };
-  
+
     try {
-      // Replace this with your actual published Apps Script Web App URL
-      const scriptURL = "https://script.google.com/macros/s/AKfycbw-u1MoOplIqEJtLnICzHUDSA0T5_yMN1mKdipA_6KfLQJFCo-hBK_uXGe7HFRN8-6G/exec";
-  
-      const response = await fetch(scriptURL, {
+      // Replace with your actual published Apps Script Web App URL
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbytBRzRSlemlEr8zo7MMuX3E_F2n6DbuRbzplKHHMaDuKox-eQh6ocyQQYyPGwOlPcz/exec";
+
+      await fetch(scriptURL, {
         method: "POST",
+        mode: "no-cors", // Using no-cors returns an opaque response
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/json"
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify(data)
       });
-  
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-  
-      const result = await response.json();
-      if (result.status === "success") {
-        alert("Thanks for signing up! 🎉");
-        e.currentTarget.reset();
-      } else {
-        alert("Something went wrong. Please try again.");
-      }
+
+      // With no-cors mode, we assume success if no error is thrown
+      alert("Thanks for signing up! 🎉");
+      formEl.reset();
     } catch (error) {
       console.error("Error submitting to Google Sheets:", error);
       alert("Something went wrong. Please try again.");
     }
-  
+
     setIsSubmitting(false);
   };
-  
 
   return (
     <section
@@ -150,9 +146,7 @@ const BetaSection = () => {
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
               )}
             >
-              {/* <Button variant="primary" size="lg" icon={<ArrowRight size={20} />} iconPosition="right">
-                Apply for Beta Access
-              </Button> */}
+              {/* Optionally, place a button here if needed */}
             </div>
           </div>
 
