@@ -1,8 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
-import Button from "./Button";
 import { ArrowRight, Zap, Users, MessageSquare, Shield, Headphones } from "lucide-react";
-import { supabase } from "@/lib/supabaseClient"; // Ensure this file uses import.meta.env for secrets
 
 interface BetaBenefit {
   icon: React.ReactNode;
@@ -60,7 +58,8 @@ const BetaSection = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-
+  
+    // Grab form data
     const formData = new FormData(e.currentTarget);
     const data = {
       full_name: formData.get("full_name"),
@@ -69,18 +68,38 @@ const BetaSection = () => {
       role: formData.get("role"),
       email_volume: formData.get("email_volume")
     };
-
-    const { error } = await supabase.from("beta_signups").insert([data]);
-
-    if (error) {
+  
+    try {
+      // Replace this with your actual published Apps Script Web App URL
+      const scriptURL = "https://script.google.com/macros/s/AKfycbw-u1MoOplIqEJtLnICzHUDSA0T5_yMN1mKdipA_6KfLQJFCo-hBK_uXGe7HFRN8-6G/exec";
+  
+      const response = await fetch(scriptURL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+  
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+  
+      const result = await response.json();
+      if (result.status === "success") {
+        alert("Thanks for signing up! 🎉");
+        e.currentTarget.reset();
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting to Google Sheets:", error);
       alert("Something went wrong. Please try again.");
-      console.error(error);
-    } else {
-      alert("Thanks for signing up! 🎉");
-      e.currentTarget.reset();
     }
+  
     setIsSubmitting(false);
   };
+  
 
   return (
     <section
